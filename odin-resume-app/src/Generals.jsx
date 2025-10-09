@@ -16,8 +16,8 @@ function generalInformation() {
     })
     return (
         <div className="general-information">
-            <h2>Resume Header</h2>
-            <form className={""}>
+            <h2 className="text-5xl font-bold md-4 pb-12 -pt-4 text-white text-center justify-center">Resume Header</h2>
+            <form>
                 <input type="text" placeholder="First Name" />
                 <input type="text" placeholder="Last Name" />
                 <input type="email" placeholder="Email" />

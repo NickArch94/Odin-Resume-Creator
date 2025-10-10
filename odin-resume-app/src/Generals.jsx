@@ -17,18 +17,19 @@ function generalInformation() {
     return (
         <div className="general-information">
             <h2 className="text-5xl font-bold md-4 pb-12 -pt-4 text-white text-center justify-center">Resume Header</h2>
-            <form>
-                <input type="text" placeholder="First Name" />
-                <input type="text" placeholder="Last Name" />
-                <input type="email" placeholder="Email" />
-                <input type="tel" placeholder="Phone" />
-                <input type="text" placeholder="Address" />
-                <input type="text" placeholder="City" />
-                <input type="text" placeholder="State" />
-                <input type="text" placeholder="Zip Code" />
-                <input type="text" placeholder="Country" />
-                <input type="url" placeholder="LinkedIn URL" />
-                <input type="url" placeholder="GitHub URL" />
+            <form id="contact-info-form" className="flex flex-col gap-4">
+                <label className="text-xl flex flex-center font-semibold text-white">First Name</label>
+                <input type="text" placeholder="First Name" className="h-10" />
+                <input type="text" placeholder="Last Name" className="h-10" />
+                <input type="email" placeholder="Email" className="h-10" />
+                <input type="tel" placeholder="Phone" className="h-10" />
+                <input type="text" placeholder="Address" className="h-10" />
+                <input type="text" placeholder="City" className="h-10" />
+                <input type="text" placeholder="State" className="h-10" />
+                <input type="text" placeholder="Zip Code" className="h-10" />
+                <input type="text" placeholder="Country" className="h-10" />
+                <input type="url" placeholder="LinkedIn URL" className="h-10" />
+                <input type="url" placeholder="GitHub URL" className="h-10" />
             </form>
         </div>
     )

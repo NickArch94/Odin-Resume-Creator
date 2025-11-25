@@ -10,5 +10,6 @@ createRoot(document.getElementById('root')).render(
     <App />
     <Introduction />
     <Generals />
+    <Clock />
   </StrictMode>,
 )

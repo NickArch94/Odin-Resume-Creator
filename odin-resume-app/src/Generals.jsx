@@ -1,19 +1,45 @@
 import { useState } from "react";
 
-function generalInformation() {
-    const [generalInfo, setGeneralInfo] = useState({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        address: "",
-        city: "",
-        state: "",
-        zip: "",
-        country: "",
-        linkedin: "",
-        github: "",
-    })
+function generalInformation(
+    handleSubmit,
+    personalDetails,
+    setPersonalDetails,
+) {
+    const [namePlace, setNamePlace] = useState('')
+    const [lastNamePlace, setLastNamePlace] = useState('')
+    const [emailPlace, setEmailPlace] = useState('')
+    const [phonePlace, setPhonePlace] = useState('')
+    const [addressPlace, setAddressPlace] = useState('')
+    const [cityPlace, setCityPlace] = useState('')
+    const [statePlace, setStatePlace] = useState('')
+    const [zipPlace, setZipPlace] = useState('')
+    const [countryPlace, setCountryPlace] = useState('')
+    const [linkedinPlace, setLinkedinPlace] = useState('')
+    const [githubPlace, setGithubPlace] = useState('')
+    const [formSubmitted, setFormSubmitted] = useState(false)
+
+    function clearPlaceholders() {
+        setNamePlace('')
+        setLastNamePlace('')
+        setEmailPlace('')
+        setPhonePlace('')
+        setAddressPlace('')
+        setCityPlace('')
+        setStatePlace('')
+        setZipPlace('')
+        setCountryPlace('')
+        setLinkedinPlace('')
+        setGithubPlace('')
+    }
+
+    function onSubmit(e) {
+        let personalDetails = e.target.value
+        setPersonalDetails({ ...personalDetails, [e.target.name]: e.target.value })
+    }
+
+    
+
+
     return (
         <div className="general-information">
             <h2 className="text-5xl font-bold md-4 pb-12 -pt-4 text-white text-center justify-center">Resume Header</h2>

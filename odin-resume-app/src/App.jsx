@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Generals from './Generals.jsx'
 import ResumeTemplate from './ResumeTemplate.jsx'
+import Introduction from './Introduction.jsx'
+import Clock from "./Clock.jsx";
 
 function App() {
   const [personalDetails, setPersonalDetails] = useState({
@@ -51,6 +53,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <Introduction />
       <Generals
         personalDetails={personalDetails}
         setPersonalDetails={setPersonalDetails}
@@ -64,6 +67,7 @@ function App() {
         education={education}
         experience={experience}
       />
+      <Clock />
       {/* ResumeTemplate will be added here later */}
     </>
   )

@@ -2,9 +2,35 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Generals from './Generals.jsx'
+import ResumeTemplate from './ResumeTemplate.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [personalDetails, setPersonalDetails] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    address: '',
+    city: '',
+    state: '',
+    zip: '',
+    country: '',
+    linkedin: '',
+    github: '',
+  });
+  const [education, setEducation] = useState([]);
+  const [experience, setExperience] = useState([]);
+
+  // Handler to add education entry
+  const addEducation = (edu) => {
+    setEducation([...education, edu]);
+  };
+
+  // Handler to add experience entry
+  const addExperience = (exp) => {
+    setExperience([...experience, exp]);
+  };
 
   return (
     <>
@@ -18,9 +44,6 @@ function App() {
       </div>
       <h1 className="flex justify-center mx-auto bg-blue-600">Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
@@ -28,6 +51,20 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <Generals
+        personalDetails={personalDetails}
+        setPersonalDetails={setPersonalDetails}
+        education={education}
+        addEducation={addEducation}
+        experience={experience}
+        addExperience={addExperience}
+      />
+      <ResumeTemplate
+        personalDetails={personalDetails}
+        education={education}
+        experience={experience}
+      />
+      {/* ResumeTemplate will be added here later */}
     </>
   )
 }

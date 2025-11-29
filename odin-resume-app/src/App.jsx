@@ -53,24 +53,24 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <Introduction />
-      <Generals
-        personalDetails={personalDetails}
-        setPersonalDetails={setPersonalDetails}
-        education={education}
-        addEducation={addEducation}
-        experience={experience}
-        addExperience={addExperience}
-      />
-      <ResumeTemplate
-        personalDetails={personalDetails}
-        education={education}
-        experience={experience}
-      />
-      <Clock />
-      {/* ResumeTemplate will be added here later */}
-    </>
-  )
+        <Introduction />
+        <Generals
+            personalDetails={personalDetails}
+            setPersonalDetails={setPersonalDetails}
+            education={education}
+            addEducation={addEducation}
+            experience={experience}
+            addExperience={addExperience}
+        />
+        <ResumeTemplate
+            personalDetails={personalDetails}
+            education={education}
+            experience={experience}
+        />
+        <Clock />
+        {/* ResumeTemplate will be added here later */}
+      </>
+    )
 }
 
 export default App

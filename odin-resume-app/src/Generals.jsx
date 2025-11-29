@@ -48,7 +48,7 @@ function Generals({ personalDetails, setPersonalDetails, education, addEducation
   };
 
   return (
-    <div className="general-information p-6 bg-gray-800 rounded-lg mt-8">
+    <div className="general-information p-8 bg-gray-800 rounded-lg mt-8">
       <h2 className="text-3xl font-bold text-white mb-4">General Information</h2>
       <form className="flex flex-col gap-2 mb-8">
         <input name="firstName" value={personalDetails.firstName} onChange={handlePersonalChange} type="text" placeholder="First Name" className="h-10 px-2" />
